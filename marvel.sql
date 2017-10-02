@@ -169,8 +169,8 @@ INSERT INTO people (name) VALUES ('Steve Meiklejohn');
 DELETE FROM people WHERE name = 'John Daley';
 
 -- Somehow the list of people includes two people named 'Alex'. Change these entries to the proper names ('Alex the First', 'Alex the Second')
-UPDATE people SET name = 'Alex The First' WHERE id = '6';
-UPDATE people SET name = 'Alex The Second' WHERE id = '16';
+UPDATE people SET name = 'Alex The First' WHERE name = 'Alex	MacFadyen';
+UPDATE people SET name = 'Alex The Second' WHERE name = 'Alex	Smith';
 
 -- The cinema has just heard that they will be holding an exclusive midnight showing of 'Guardians of the Galaxy 2'!! Create a new entry in the 'movies' table to reflect this.
 INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '00:00');
@@ -183,4 +183,4 @@ UPDATE movies SET show_time = '21:30' WHERE title = 'Guardians of the Galaxy';
 --
 -- Research how to delete multiple entries from your table in a single command.
 
-DELETE FROM people WHERE id >=18 and id<= 20
+DELETE FROM people WHERE id >=11 and id<= 20
