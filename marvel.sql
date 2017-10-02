@@ -154,14 +154,13 @@ SELECT * FROM movies;
 SELECT name FROM people;
 
 -- Oops! Someone at CodeClan spelled John's name wrong! Change it to reflect the proper spelling (change 'John Crookshank' to 'John Cruickshank').
-UPDATE people SET name = 'John Cruickshank' WHERE name = 'John Crookshank';
+UPDATE people SET name = 'John Cruickshank' WHERE id = 2;
 
 -- Return ONLY your name from the 'people' table.
 SELECT name FROM people WHERE id = 17;
 
 -- The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
 DELETE FROM movies WHERE title = 'Batman Begins';
-
 
 -- Create a new entry in the 'people' table with the name of one of the instructors.
 INSERT INTO people (name) VALUES ('Steve Meiklejohn');
@@ -174,11 +173,8 @@ DELETE FROM people WHERE name = 'John Daley';
 UPDATE people SET name = 'Alex The First' WHERE id = '6';
 UPDATE people SET name = 'Alex The Second' WHERE id = '16';
 
-
-
 -- The cinema has just heard that they will be holding an exclusive midnight showing of 'Guardians of the Galaxy 2'!! Create a new entry in the 'movies' table to reflect this.
 INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '00:00');
-
 
 -- The cinema would also like to make the Guardian movies a back to back feature. Update the 'Guardians of the Galaxy' show time from 18:55 to 21:30
 
