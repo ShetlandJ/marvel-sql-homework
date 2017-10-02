@@ -154,10 +154,9 @@ SELECT * FROM movies;
 SELECT name FROM people;
 
 -- Oops! Someone at CodeClan spelled John's name wrong! Change it to reflect the proper spelling (change 'John Crookshank' to 'John Cruickshank').
-UPDATE people SET name = 'John Cruickshank' WHERE id = 2;
-
+UPDATE people SET name = 'John Cruickshank' WHERE name = 'John	Crookshank';
 -- Return ONLY your name from the 'people' table.
-SELECT name FROM people WHERE id = 17;
+SELECT name FROM people WHERE name = 'James	Stewart';
 
 -- The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
 DELETE FROM movies WHERE title = 'Batman Begins';
